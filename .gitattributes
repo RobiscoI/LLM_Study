@@ -5,6 +5,10 @@
 # 셸 스크립트는 작업트리에서도 LF 여야 한다 — Git Bash 가 CRLF 를 못 읽는다.
 *.sh   text eol=lf
 
+# git 훅은 확장자가 없다 — *.sh 에 걸리지 않으므로 따로 못박는다.
+# CRLF 로 체크아웃되면 Git Bash 가 셔뱅을 못 읽어 훅이 조용히 죽는다.
+.githooks/* text eol=lf
+
 # PowerShell 은 CRLF. 한글이 든 .ps1 은 반드시 UTF-8 BOM 으로 저장할 것
 # (BOM 이 없으면 Windows PowerShell 5.1 이 CP949 로 오해석해 줄이 통째로 사라진다).
 *.ps1  text eol=crlf
