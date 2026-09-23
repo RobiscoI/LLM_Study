@@ -1,0 +1,55 @@
+[project]
+name = "llm-study"
+version = "0.1.0"
+description = "LLM/Agentic AI 24-week study"
+requires-python = ">=3.12"
+
+# 의존성은 requirements.txt 로 관리한다.
+# 1~4주차가 venv·pip·requirements.txt 를 '이해하는' 단계라,
+# 패키지 관리를 pyproject 에 숨기지 않는다.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# pytest — 4주차부터 쓴다
+# ─────────────────────────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths = ["labs", "llm-from-scratch", "apps/api", "evals"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = [
+    "-ra",              # 통과 외 전부 요약 — 왜 skip 됐는지 보이게
+    "--strict-markers",
+    "--showlocals",     # 실패 시 지역변수. 학습 중에는 이게 로그보다 빠르다
+]
+markers = [
+    "slow: 실제 LLM API 를 호출하거나 수 초 이상 걸리는 테스트",
+    "net: 네트워크가 필요한 테스트",
+]
+filterwarnings = ["error::DeprecationWarning"]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ruff — 포매터 + 린터. 스타일 논쟁을 코드 리뷰에서 빼기 위한 것이다
+# ─────────────────────────────────────────────────────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".venv", "apps/web", "node_modules", "refs"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes — 미사용 변수·import
+    "I",        # isort
+    "B",        # bugbear — 흔한 함정
+    "UP",       # pyupgrade
+    "ASYNC",    # 13주차 SSE·비동기에서 실제로 걸린다
+    "S",        # bandit 보안 — 22주차 전에도 켜둔다
+]
+ignore = [
+    "E501",     # 줄 길이는 포매터가 처리
+    "S101",     # assert 허용 — 검증 프로토콜 2단계에서 shape assert 를 쓴다
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/test_*.py" = ["S105", "S106"]   # 테스트의 더미 비밀값
+
+[tool.ruff.format]
+quote-style = "double"

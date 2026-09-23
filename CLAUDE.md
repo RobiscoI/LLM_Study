@@ -57,17 +57,21 @@ Notion 로드맵 「LLM·Agentic AI 풀스택 24주 학습 로드맵」을 실�
 ```
 LLM_Study/
 ├─ CLAUDE.md                  이 파일
+├─ .mcp.json                  MCP 서버 (커밋됨 — 두 PC 공유). 지금은 비어 있다
+├─ pyproject.toml             pytest · ruff 설정
 ├─ docs/
 │  ├─ ROADMAP.md              24주 표 + 운영 방식
+│  ├─ PROGRESS.md             ★ 진도표 — /weekly-close 로 갱신
+│  ├─ MCP.md                  MCP 도입 계획 (무엇을 언제 왜)
 │  ├─ weekly/                 ★ 주차 노트 — 9절 템플릿 (_TEMPLATE.md)
-│  └─ architecture/           아키텍처·설계 결정
+│  └─ architecture/           아키텍처·설계 결정 (ADR_TEMPLATE.md)
 ├─ labs/                      주차별 짧은 실습 (앱에 안 들어가는 것)
 ├─ llm-from-scratch/          tokenizer·attention·transformer (7–9주)
 ├─ apps/
 │  ├─ api/                    FastAPI (4주~)
 │  └─ web/                    Next.js (11주~)
 ├─ packages/shared/           공통 타입·스키마
-├─ evals/                     평가 데이터·스크립트 (21주~)
+├─ evals/                     평가 데이터·스크립트 (21주~, README.md 에 형식)
 ├─ refs/
 │  ├─ notion/                 ★ 로드맵 원문 (수정 금지)
 │  └─ papers/                 논문·자료
