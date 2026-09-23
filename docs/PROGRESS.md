@@ -83,12 +83,23 @@ Notion 의 「24주 학습 진도」 DB 에 해당한다. 저장소 안에 두�
 
 | 항목 | 필요 시점 | RMS_Digital | RJH |
 |---|---|---|---|
-| Python 3.12 | 1주 | ☑ 3.12.10 | ☐ |
+| Python ≥3.12 | 1주 | ☑ 3.12.10 | ☑ 3.14.5 |
 | git · VS Code | 1주 | ☑ | ☑ |
 | **Node.js LTS** | 11주 (+ MCP 전제) | ☐ | ☐ |
 | **Docker Desktop** | 14주 | ☐ | ☐ |
 | PostgreSQL (Docker 로) | 14주 | ☐ | ☐ |
 | gh CLI | 23주 (편의상 지금) | ☐ | ☐ |
+
+> **⚠ 두 PC 의 Python 마이너 버전이 다르다** — RMS_Digital 3.12.10 / RJH 3.14.5.
+> `pyproject.toml` 은 `requires-python = ">=3.12"` 라 **양쪽 모두 유효**하고,
+> 6주차 PyTorch 를 포함해 로드맵 전 구간의 패키지가 3.14 에서 바이너리 휠로 해석된다
+> (2026-09-23 실측: `torch 2.14.0 cp314` · `faiss-cpu 1.15.1 cp314` · `tiktoken 0.14.0 cp314` ·
+> `chromadb 1.5.9 cp39-abi3` · numpy · fastapi · sqlalchemy · psycopg · transformers · pytest · playwright).
+>
+> 진짜 리스크는 버전 숫자가 아니라 **두 PC 가 서로 다른 패키지 버전을 잡는 것**이다.
+> `.venv` 는 git 으로 오가지 않고 `requirements.txt` 에 현재 **핀이 없다**.
+> → **관문 4주(FastAPI + pytest) 시점에 의존성을 핀으로 전환**하고,
+> 그때 핀은 **낮은 쪽(3.12) 기준**으로 잡는다.
 
 ## 진도 조정 기록
 
