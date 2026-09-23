@@ -1,0 +1,4 @@
+#!/bin/sh
+# branch/checkout 직후에도 동일하게 확인한다. (파일 체크아웃은 제외)
+[ "$3" = "1" ] || exit 0
+exec "$(dirname "$0")/_check-host-paths.sh"

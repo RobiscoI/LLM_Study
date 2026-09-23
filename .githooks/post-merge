@@ -1,0 +1,5 @@
+#!/bin/sh
+# git pull / merge 직후 현재 PC 기준으로 경로 설정을 다시 해석해 보여준다.
+# 두 대의 PC(RJH / RMS_Digital)가 같은 저장소를 공유하므로
+# 상대편 PC 의 절대경로가 그대로 들어오는 일이 잦다.
+exec "$(dirname "$0")/_check-host-paths.sh"

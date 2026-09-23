@@ -1,0 +1,3 @@
+# 실습 기본 패키지. 커리큘럼 확정 후 추가한다.
+anthropic
+python-dotenv
