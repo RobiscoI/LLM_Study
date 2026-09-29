@@ -65,6 +65,7 @@ LLM_Study/
 │  ├─ MCP.md                  MCP 도입 계획 (무엇을 언제 왜)
 │  ├─ weekly/                 ★ 주차 노트 — 9절 템플릿 (_TEMPLATE.md)
 │  └─ architecture/           아키텍처·설계 결정 (ADR_TEMPLATE.md)
+├─ lessons/                   주차 본문 예제 — lessons/week00/inspect_runtime.py 식 (Notion 주차 페이지 본문 코드)
 ├─ labs/                      주차별 짧은 실습 (앱에 안 들어가는 것)
 ├─ llm-from-scratch/          tokenizer·attention·transformer (7–9주)
 ├─ apps/
