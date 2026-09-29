@@ -42,6 +42,7 @@ outputs/
 logs/
 *.log
 lessons/week*/practice.txt
+lessons/week*/memo.txt
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 에디터 · OS
