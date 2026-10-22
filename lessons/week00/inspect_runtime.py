@@ -6,6 +6,8 @@ print("Python:", sys.executable) # 실제 실행 중인 Python의 위치
 print("작업 폴더:", Path.cwd()) # 상대 경로를 해석하는 기준
 print("소스 폴더:", Path(__file__).resolve().parent) 
 print("프로세스 ID:", os.getpid()) # 실행마다 달라질 수 있는 번호
+print("prefix:", sys.prefix) # 지금 쓰는 환경의 루트 (venv 면 .venv)
+print("base_prefix:", sys.base_prefix) # venv 를 만든 원래 Python 의 루트
 
 memo = Path(__file__).resolve().parent / "memo.txt" # 경로 객체만 만든다. 파일은 만들어지지 않는다
 if memo.exists():
