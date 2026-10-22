@@ -1,12 +1,12 @@
 # LLM_Study
 
 **LLM·Agentic AI 풀스택 24주 학습 로드맵**을 실행하는 저장소.
-두 대의 PC(`RJH` / `RMS_Digital`)에서 공유한다.
+여러 PC(`RJH` / `RMS_Digital` / `USER`)에서 공유한다.
 
 > **목표** — LLM 의 원리와 코드를 이해하고, 프론트엔드·백엔드·DB·네트워크·배포·
 > Agentic AI 를 직접 연결하여 실제 앱을 만든다.
-> **24주 후** — Python 으로 토큰화·어텐션을 구현하고, Next.js + FastAPI + PostgreSQL
-> 기반의 스트리밍 RAG/Agent 앱을 안전하게 배포한다.
+> **24주 후** — Python 으로 토큰화·어텐션을 구현하고, PC 안의 Next.js + FastAPI + 로컬 DB
+> + 로컬 생성기로 스트리밍 RAG/Agent 앱을 만든다. PostgreSQL·Docker·공개 배포는 단계적·선택 확장.
 
 로드맵 전문은 [`docs/ROADMAP.md`](docs/ROADMAP.md), 원문은 `refs/notion/`.
 작업 규약은 [`CLAUDE.md`](CLAUDE.md).
@@ -41,7 +41,7 @@ powershell -ExecutionPolicy Bypass -File tools/study-config/resolve.ps1
 | 단계 | 명령 |
 |---|---|
 | 새 주차 시작 | `/weekly-note` → `docs/weekly/W<NN>_<주제>.md` 생성 |
-| 오늘 시작 | `/daily` — 수준 확인 질문 3개 → 개념 20% / 코딩 60% / 검증·회고 20% |
+| 오늘 시작 | `/daily` — 수준 확인 질문 3개 → 시간 제한 없이 목적·원리·손계산·코드·실행·실패 검증 |
 | 개념이 막힘 | `/verify` — 7단계 검증 (손계산·반례) |
 | 동작이 안 됨 | `/debug` — 사실/가설 분리 + 계층별 진단표 |
 | 코드 제출 | `/review` — 위험한 문제 → 원인 → 최소 수정 → 테스트 |
@@ -60,11 +60,11 @@ powershell -ExecutionPolicy Bypass -File tools/study-config/resolve.ps1
 | `apps/web/` | 11주~ Next.js |
 | `packages/shared/` | 12주~ 공통 타입·스키마 |
 | `evals/` | 21주~ 평가 데이터·스크립트 |
-| `refs/notion/` | 로드맵 원문 (**수정 금지**) |
+| `refs/notion/` | 로드맵 원문 (Notion 에서 내보낸 날짜별 사본) |
 
 > 빈 폴더는 `.gitkeep` 만 있다. **미리 채우지 않는다** — 각 주차에 직접 만드는 것이 학습이다.
 
-## 인코딩 규약 (두 PC 다 Windows)
+## 인코딩 규약 (모든 PC 가 Windows)
 
 | 확장자 | 인코딩 | 줄바꿈 |
 |---|---|---|

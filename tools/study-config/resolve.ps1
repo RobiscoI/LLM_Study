@@ -3,7 +3,7 @@
   study-config.json 의 PC 의존 경로를 현재 PC 기준으로 해석한다.
 
 .DESCRIPTION
-  이 저장소는 두 대의 PC 에서 공유된다 (RJH / RMS_Digital).
+  이 저장소는 여러 PC 에서 공유된다 (RJH / RMS_Digital / USER).
   Python 설치 경로와 대용량 자료 경로가 서로 다르므로,
   study-config.json 의 절대경로를 그대로 쓰면 반드시 실패한다.
 

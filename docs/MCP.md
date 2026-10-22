@@ -19,7 +19,7 @@
 | 주차 | MCP | 왜 그때 |
 |---|---|---|
 | 11~ | **Context7** (라이브러리 문서) | Next.js·FastAPI·PyTorch 는 버전마다 API 가 바뀐다. 모델이 옛 API 를 그럴듯하게 지어내는 것을 줄인다. **문서를 찾아줄 뿐 코드를 대신 쓰지 않아** 학습을 대체하지 않는 종류다 |
-| 14~ | **PostgreSQL** | 스키마·쿼리 직접 확인. `psql` 로도 되므로 필수는 아니다 |
+| 14~ | **PostgreSQL** (선택 경로) | 스키마·쿼리 직접 확인. `psql` 로도 되므로 필수는 아니다 |
 | 20 | **직접 만든 서버** | ★ 실습 결과물. 여기 등록하는 것이 20주차 완료의 일부다 |
 | 21~ | **Playwright** | 권장 스택에 Playwright 가 있고 E2E 는 브라우저 조작이 본질이다 |
 | 필요시 | Notion | 로드맵이 갱신되면 재동기화. 원문은 이미 `refs/notion/` 에 export 돼 있다 |
@@ -35,7 +35,7 @@ winget install OpenJS.NodeJS.LTS
 
 ## 추가하는 방법
 
-`.mcp.json` 의 `mcpServers` 에 항목을 넣고 커밋한다 — **두 PC 가 자동으로 같은 구성**이 된다.
+`.mcp.json` 의 `mcpServers` 에 항목을 넣고 커밋한다 — **모든 PC 가 자동으로 같은 구성**이 된다.
 
 ```jsonc
 {

@@ -28,6 +28,17 @@
       "env_file": ".env",
       "data_root": "D:/LLM_Data",
       "notes": "대용량(모델 가중치·데이터셋)은 저장소 밖 D:/LLM_Data 에 둔다. DF 의 D:/DF_Data 와 같은 자리."
+    },
+
+    "USER": {
+      "label": "세 번째 PC",
+      "repo_root": "C:/Users/USER/Desktop/LLM_Study",
+      "python_exe": "C:/Python314/python.exe",
+      "python_release": "3.14.4",
+      "venv": ".venv",
+      "env_file": ".env",
+      "data_root": "",
+      "notes": "data_root 가 비어 있어 저장소 안 data/ 를 쓴다. 대용량 자료를 저장소 밖에 둘 때 여기를 채울 것."
     }
   },
 
@@ -38,7 +49,7 @@
   },
 
   "paths": {
-    "_comment": "저장소 루트 기준 상대경로만 적는다 — 두 PC 가 동일하다.",
+    "_comment": "저장소 루트 기준 상대경로만 적는다 — 모든 PC 가 동일하다.",
     "notes": "notes",
     "labs": "labs",
     "refs": "refs",
