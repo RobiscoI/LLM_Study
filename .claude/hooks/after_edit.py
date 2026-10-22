@@ -10,6 +10,8 @@ import sys
 
 
 def main() -> int:
+    # Windows 기본 stderr 인코딩(cp949)이면 Claude Code 가 UTF-8 로 읽어 한글이 깨진다.
+    sys.stderr.reconfigure(encoding="utf-8")
     try:
         payload = json.load(sys.stdin)
     except Exception:

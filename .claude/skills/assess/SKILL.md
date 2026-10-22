@@ -20,7 +20,7 @@ invocation: user
 
 ### 1. 대상 확정
 
-인자로 주차를 받는다 (`/assess 8`). 없으면 최근 주차 노트에서 가져온다.
+인자로 주차를 받는다 (`/assess 8`). 없으면 `docs/progress.md` 의 현재 장을 쓴다. 기록 대상은 `docs/weeks/week-NN.md` 다.
 
 ### 2. 수준별 문제 — 아래에서 위로
 

@@ -13,14 +13,15 @@
    claude                                       # 첫 실행 시 로그인(개인 Pro), Context7 MCP 승인
    /weekly-start
    ```
-4. 코치가 "git pull 하셨나요?" 로 시작하면 성공. `/agents` 로 4개 에이전트, `/help` 로 5개 스킬이 보이는지 확인.
+4. 코치가 "git pull 하셨나요?" 로 시작하면 성공. `/agents` 에 프로젝트 에이전트 6개, 입력창에 `/` 를 쳤을 때 자동완성에 프로젝트 스킬 8개가 보이는지 확인 (`/weekly` 까지 치면 weekly-start · weekly-retro · weekly-close 3개가 보인다).
 5. 커밋: `git add -A` → `git commit -m "week-01: Claude Code 코치 설정 추가"` → `git push`
 
 들어 있는 것
 - `CLAUDE.md` — 코치 지침 정본 (Notion 의 GPT 지침을 옮기고 현재 PC 환경을 반영)
 - `.claude/settings.json`, `.claude/hooks/after_edit.py` — 권한·차단 목록, .py 자동 문법 검사
-- `.claude/agents/` — reviewer · debugger · test-writer · retro-writer
-- `.claude/skills/` — /weekly-start /explain-concept /code-review /debug-trace /weekly-retro
+- `.claude/agents/` (6) — reviewer · debugger · test-writer · retro-writer + 기존 study-coach · concept-verifier
+- `.claude/skills/` (8) — /weekly-start /explain-concept /code-review /debug-trace /weekly-retro + 기존 /verify /assess /weekly-close
+  (기존 code-reviewer · incident-analyst · /review · /debug · /daily · /weekly-note 는 겹쳐서 2026-10-23 삭제, 좋은 내용은 reviewer · debugger 로 옮김)
 - `.mcp.json` — Context7 (라이브러리 공식 문서)
 - `docs/progress.md` (10-13 상태 반영) · `environment.md` (실측값 반영) · `commands.md` · `decision-log.md` · `weeks/TEMPLATE.md` · `errors/TEMPLATE.md` · `glossary/README.md`
 - `scripts/new_week.py` — `lessons/weekNN` + `docs/weeks/week-NN.md` 생성

@@ -40,20 +40,23 @@ powershell -ExecutionPolicy Bypass -File tools/study-config/resolve.ps1
 
 | 단계 | 명령 |
 |---|---|
-| 새 주차 시작 | `/weekly-note` → `docs/weekly/W<NN>_<주제>.md` 생성 |
-| 오늘 시작 | `/daily` — 수준 확인 질문 3개 → 시간 제한 없이 목적·원리·손계산·코드·실행·실패 검증 |
-| 개념이 막힘 | `/verify` — 7단계 검증 (손계산·반례) |
-| 동작이 안 됨 | `/debug` — 사실/가설 분리 + 계층별 진단표 |
-| 코드 제출 | `/review` — 위험한 문제 → 원인 → 최소 수정 → 테스트 |
-| 주차 마감 | `/weekly-close` → `/assess` (이해도 5수준 판정) |
+| 새 주차 시작 | `python scripts/new_week.py NN` → `lessons/weekNN/` + `docs/weeks/week-NN.md` 생성 |
+| 오늘 시작 | `/weekly-start` — git pull 확인 → 수준 확인 질문 3개 → 오늘 계획 |
+| 개념이 궁금함 | `/explain-concept <용어>` — 개념→흐름→최소 코드→실행→흔한 오류→확인 문제 |
+| 개념·수식이 막힘 | `/verify` — 7단계 검증 (손계산·반례) |
+| 동작이 안 됨 | `/debug-trace` — 사실/가설 분리 + 계층별 진단 → `docs/errors/` 기록 |
+| 코드 제출 | `/code-review <파일>` — 위험한 문제 → 원인 → 최소 수정 → 테스트 |
+| 오늘 마무리 | `/weekly-retro` — `docs/weeks/week-NN.md` 기록 + 커밋 안내 |
+| 장 마감 | `/weekly-close` → `/assess` (이해도 5수준 판정) |
 
-에이전트 4종: `study-coach` · `code-reviewer` · `incident-analyst` · `concept-verifier`.
+에이전트 6종: `study-coach` · `concept-verifier` · `reviewer` · `debugger` · `test-writer` · `retro-writer`.
 
 ## 폴더
 
 | 경로 | 언제 채우나 |
 |---|---|
-| `docs/weekly/` | 매주 (9절 템플릿 `_TEMPLATE.md`) |
+| `docs/weeks/` | 매 세션 (`TEMPLATE.md`, `/weekly-retro` 가 기록) |
+| `docs/weekly/` | 옛 9절 노트 보관 (`W01_PYTHON_OS_PROCESS.md`) — 새 기록은 `docs/weeks/` |
 | `labs/` | 1–6주 짧은 실습 |
 | `llm-from-scratch/` | 7–9주 tokenizer·attention·transformer |
 | `apps/api/` | 4주~ FastAPI |
