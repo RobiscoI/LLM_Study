@@ -21,7 +21,7 @@
 
     "RMS_Digital": {
       "label": "작업 PC",
-      "repo_root": "C:/Users/RMS_Digital/Desktop/LLM_Study",
+      "repo_root": "C:/Users/RMS_Digital/Desktop/Project/LLM_Study",
       "python_exe": "C:/Users/RMS_Digital/AppData/Local/Programs/Python/Python312/python.exe",
       "python_release": "3.12.10",
       "venv": ".venv",
