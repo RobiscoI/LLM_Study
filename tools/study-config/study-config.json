@@ -11,7 +11,7 @@
 
     "RJH": {
       "label": "원 개발자 PC",
-      "repo_root": "C:/Users/RJH/Desktop/LLM_Study",
+      "repo_root": "C:/Users/RJH/Desktop/Project/LLM_Study",
       "python_exe": "",
       "venv": ".venv",
       "env_file": ".env",
